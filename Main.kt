@@ -14,7 +14,9 @@ fun main() {
         Requisito("A senha deve conter o Emoji de floco de neve (❄).") { it.contains("❄") },
 
         // Criatividade 1: Contém o número de caracteres
-        Requisito("A senha deve conter o número de caracteres que ela possui (ex: se tem 10 chars, deve ter '10').") { it.contains(it.length.toString()) },
+        Requisito("A senha deve conter o número de caracteres que ela possui (ex: se tem 10 chars, deve ter '10').") { 
+            it.contains(it.length.toString()) 
+        },
 
         // Criatividade 2: Soma dos dígitos
         Requisito("A soma de todos os números na senha deve ser igual a 25.") {
@@ -34,7 +36,7 @@ fun main() {
 
     // 2. Loop de tentativa e erro
     do {
-        println("\nDigite sua senha: ")
+        print("\nDigite sua senha: ")
         val entrada = readLine() ?: ""
 
         var erroEncontrado: String? = null
